@@ -1,0 +1,19 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: dev-user-access
+  namespace: dev
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: dev-user-full-access
+subjects:
+- kind: Group
+  namespace: dev
+  name: 279eb819-f4b0-474d-b479-b179836339d6
+- kind: User
+  namespace: dev
+  name: lukasz@kaluzny.pro
+- kind: User
+  namespace: dev
+  name: 75686ebe-f809-4d6d-a1fc-3f5890a90975
