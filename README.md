@@ -25,3 +25,16 @@ az aks create \
     --no-ssh-key \
     --aad-admin-group-object-ids 8f1d7d0a-9b57-4e43-a543-144a8cdfa8bd
 ```
+
+## Opcje skalowania, autoskaler, pule węzłów
+
+Link:
+- []()
+https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/
+
+```bash
+az aks update \
+    --name azuread \
+    --resource-group azuread \
+    --cluster-autoscaler-profile expander=priority
+```

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-autoscaler-priority-expander
+  namespace: kube-system
+data:
+  priorities: |-
+    10: 
+      - aks-nodepool1-34419311-vmss
+    50: 
+      - aks-spot-74243589-vmss
